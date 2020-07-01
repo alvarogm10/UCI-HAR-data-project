@@ -1,4 +1,4 @@
-Getting and cleaning data final course project
+## Getting and cleaning data final course project
 
 UCI HAR dataset is the data collect from a experiment in which is measured 30 subjects movement via accelerometer and gyroscope of a Samsung Galaxy S mobile.
 

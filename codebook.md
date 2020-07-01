@@ -1,6 +1,6 @@
-#Code book for run_analysis.R
+# Code book for run_analysis.R
 
-##Add libraries
+## Add libraries
 
 The libraries data.table and dplyr are required for the code. So there were called at the beggining of the script.
 
@@ -9,7 +9,7 @@ library(data.table)
 library(dplyr)
 ```
 
-##Download data set
+## Download data set
 
 It is checked first if the dataset it has been already downloaded from the website and stored in the dataset folder. Also file unzip is required in the dataset folder.
 
@@ -24,7 +24,7 @@ print("Data downloaded") #Download checker
 }
 ```
 
-##Read data
+## Read data
 
 Subjects, features and the activities are needed for the final dataset. These variables are being read by the read.table command and its path into the folder.
 
@@ -54,7 +54,7 @@ Finally subjects, activities and their relate variables are merged in to a big d
 DT <- data.frame(subj,acti,feat)
 ```
 
-##Label data set
+## Label data set
 
 In order to have descriptive variable names, some headers were modified. For instance, dots are replaced by spaces, some upper cases changed by lower cases, parenthesis removed thanks to the gsub function.
 
@@ -64,7 +64,7 @@ na <- gsub("^t","Time",na)
 na <- gsub("Gyro"," gyroscope",na)
 ```
 
-##Create independent data set
+## Create independent data set
 
 The final data set comprises the mean values of each variable grouped by subject and activity. The dplyr package and its pipelines are used for these calculations.
 
